@@ -1,0 +1,211 @@
+.carplay-connect {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.carplay-connect.transitioning {
+  opacity: 0;
+}
+
+.connect-content {
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(40, 40, 40, 0.6);
+  max-width: 500px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.apple-logo {
+  margin-bottom: 30px;
+}
+
+.apple-icon {
+  width: 60px;
+  height: 60px;
+  filter: invert(1);
+}
+
+.connect-content h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.connect-content p {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 24px;
+}
+
+.connect-btn {
+  background: #007AFF;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 24px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.connect-btn:hover {
+  background: #0066CC;
+  transform: translateY(-2px);
+}
+
+.connection-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+  text-align: left;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(60, 60, 60, 0.3);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.step-number {
+  width: 24px;
+  height: 24px;
+  background: rgba(0, 122, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #007AFF;
+}
+
+.step-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.carplay-interface {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.carplay-interface.transitioning {
+  opacity: 0;
+}
+
+.carplay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: rgba(20, 20, 20, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.carplay-status {
+  display: flex;
+  gap: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.disconnect-btn {
+  background: rgba(255, 59, 48, 0.2);
+  color: #ff3b30;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.disconnect-btn:hover {
+  background: rgba(255, 59, 48, 0.3);
+}
+
+.carplay-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.carplay-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  background: rgba(40, 40, 40, 0.6);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  aspect-ratio: 1;
+}
+
+.carplay-app:hover {
+  background: rgba(60, 60, 60, 0.6);
+  transform: scale(1.02);
+}
+
+.app-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.app-name {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.carplay-dock {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 16px;
+  background: rgba(20, 20, 20, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dock-app {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(40, 40, 40, 0.6);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dock-app:hover {
+  background: rgba(60, 60, 60, 0.6);
+  transform: scale(1.05);
+} 

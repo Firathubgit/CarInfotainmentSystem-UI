@@ -1,0 +1,408 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  height: 100%;
+  overflow-y: auto;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.95) 100%);
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.profile-card, .weather-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.profile-card:hover, .weather-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profile-icon, .weather-icon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 160, 255, 0.1);
+  border-radius: 50%;
+  color: #00a0ff;
+}
+
+.profile-info, .weather-info {
+  flex: 1;
+}
+
+.profile-info h3, .weather-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.profile-info p, .weather-info p {
+  margin: 4px 0 0;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.vehicle-status-card,
+.recent-tracks-card,
+.favorite-destinations-card,
+.phone-integration-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.vehicle-status-card:hover,
+.recent-tracks-card:hover,
+.favorite-destinations-card:hover,
+.phone-integration-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+h3 {
+  margin: 0 0 20px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.status-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.status-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 160, 255, 0.1);
+  border-radius: 10px;
+  color: #00a0ff;
+}
+
+.status-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.status-value {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.status-label {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.tracks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.track-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.track-art {
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 160, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.track-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.track-title {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.track-artist {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.track-duration {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.destinations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.destination-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.destination-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.destination-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 160, 255, 0.1);
+  border-radius: 10px;
+  color: #00a0ff;
+}
+
+.destination-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.destination-name {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.destination-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.traffic-indicator {
+  font-size: 0.8rem;
+}
+
+.integration-options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.integration-option {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.integration-option:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+}
+
+.integration-icon {
+  width: 40px;
+  height: 40px;
+  filter: invert(1);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.integration-option:hover .integration-icon {
+  opacity: 1;
+}
+
+.integration-option span {
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+/* Add dragging styles */
+.profile-card[draggable="true"],
+.weather-card[draggable="true"],
+.vehicle-status-card[draggable="true"],
+.recent-tracks-card[draggable="true"],
+.favorite-destinations-card[draggable="true"],
+.phone-integration-card[draggable="true"] {
+  cursor: grab;
+}
+
+.profile-card[draggable="true"]:active,
+.weather-card[draggable="true"]:active,
+.vehicle-status-card[draggable="true"]:active,
+.recent-tracks-card[draggable="true"]:active,
+.favorite-destinations-card[draggable="true"]:active,
+.phone-integration-card[draggable="true"]:active {
+  cursor: grabbing;
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card::after,
+.weather-card::after,
+.vehicle-status-card::after,
+.recent-tracks-card::after,
+.favorite-destinations-card::after,
+.phone-integration-card::after {
+  content: '⋮⋮';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-card:hover::after,
+.weather-card:hover::after,
+.vehicle-status-card:hover::after,
+.recent-tracks-card:hover::after,
+.favorite-destinations-card:hover::after,
+.phone-integration-card:hover::after {
+  opacity: 1;
+}
+
+/* Add drag target indicator */
+.profile-card.drag-over,
+.weather-card.drag-over,
+.vehicle-status-card.drag-over,
+.recent-tracks-card.drag-over,
+.favorite-destinations-card.drag-over,
+.phone-integration-card.drag-over {
+  border: 2px solid #00a0ff;
+  box-shadow: 0 0 0 4px rgba(0, 160, 255, 0.2);
+}
+
+/* Enhance clickable items */
+.track-item,
+.destination-item,
+.integration-option {
+  position: relative;
+  overflow: hidden;
+}
+
+.track-item::before,
+.destination-item::before,
+.integration-option::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 160, 255, 0.2) 0%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.track-item:hover::before,
+.destination-item:hover::before,
+.integration-option:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.track-item:active::before,
+.destination-item:active::before,
+.integration-option:active::before {
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0.5;
+}
+
+/* Add navigation arrow indicators */
+.track-item::after,
+.destination-item::after {
+  content: '→';
+  position: absolute;
+  right: 16px;
+  color: #00a0ff;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.track-item:hover::after,
+.destination-item:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+} 

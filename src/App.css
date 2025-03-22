@@ -1,0 +1,830 @@
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #000000;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #000000;
+  overflow: hidden;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #000000;
+  overflow: hidden;
+}
+
+.app-header {
+  padding: 20px;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0;
+}
+
+.app-body {
+  flex: 1;
+  padding: 0 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Home Screen */
+.home-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.welcome-message {
+  text-align: center;
+}
+
+.welcome-message h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.welcome-message p {
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.quick-stats {
+  display: flex;
+  gap: 30px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.stat-icon {
+  font-size: 2rem;
+}
+
+.stat-label {
+  color: #888;
+}
+
+/* Media Player */
+.media-player {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.now-playing {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.album-art {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.track-info {
+  text-align: left;
+}
+
+.track-info h3 {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+}
+
+.track-info p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #888;
+}
+
+.track-info .album {
+  color: #00a0ff;
+}
+
+.media-controls {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.control-btn:hover {
+  color: #00a0ff;
+}
+
+.control-btn.large {
+  font-size: 3rem;
+}
+
+.progress-bar {
+  height: 4px;
+  background-color: #2a2a2a;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #00a0ff;
+  transition: width 0.3s ease;
+}
+
+/* Phone Screen */
+.phone-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.recent-calls h3 {
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.call-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.call-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.contact-icon {
+  font-size: 2rem;
+}
+
+.call-info {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-name {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.call-time {
+  color: #888;
+  margin: 5px 0 0 0;
+  font-size: 0.9rem;
+}
+
+/* Vehicle Screen */
+.vehicle-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.vehicle-status {
+  margin-bottom: 30px;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.status-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.status-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.status-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.status-value {
+  font-size: 1.8rem;
+  color: #00a0ff;
+  margin: 10px 0;
+}
+
+.status-label {
+  color: #888;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Settings Screen */
+.settings-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.setting-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.setting-icon {
+  font-size: 1.5rem;
+}
+
+.setting-label {
+  font-size: 1.2rem;
+}
+
+/* Add pedal controls */
+.pedal-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.pedal {
+  width: 60px;
+  height: 120px;
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border: 2px solid #3a3a3a;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.pedal:hover {
+  border-color: #00a0ff;
+}
+
+.pedal.brake {
+  background: linear-gradient(145deg, #2a2a2a, #8b0000);
+}
+
+.pedal.gas {
+  background: linear-gradient(145deg, #2a2a2a, #006400);
+}
+
+.pedal-label {
+  color: #888;
+  font-size: 0.8rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* iDrive instructions */
+.idrive-instructions {
+  position: absolute;
+  bottom:110px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #888;
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 7px 20px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+/* Rev bar styles */
+.rev-bars {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px;
+}
+
+.rev-bars.left {
+  left: 20px;
+}
+
+.rev-bars.right {
+  right: 20px;
+}
+
+.rev-bar {
+  width: 30px;
+  height: 4px;
+  background-color: #2a2a2a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.rev-bar.active {
+  background-color: #00a0ff;
+}
+
+/* Navigation Screen */
+.navigation {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  background: #000000;
+}
+
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  overflow: hidden;
+}
+
+.map-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23121212"/><path d="M0 50 L100 50" stroke="%23202020" stroke-width="0.5"/><path d="M50 0 L50 100" stroke="%23202020" stroke-width="0.5"/></svg>') repeat;
+  background-size: 50px 50px;
+}
+
+.position-marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  animation: pulse 2s infinite;
+}
+
+.position-marker::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background: #00a0ff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 160, 255, 0.5);
+}
+
+.position-marker::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 24px;
+  height: 24px;
+  border: 2px solid #00a0ff;
+  border-radius: 4px;
+}
+
+.navigation-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  pointer-events: none;
+}
+
+.nav-sidebar {
+  width: 400px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  pointer-events: auto;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-header {
+  margin-bottom: 30px;
+}
+
+.nav-title {
+  font-size: 24px;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.current-location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #00a0ff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.location-dot {
+  width: 8px;
+  height: 8px;
+  background: #00a0ff;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.search-box {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #00a0ff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.destination-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.destination-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.destination-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.destination-name {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.destination-address {
+  font-size: 14px;
+  color: #888;
+}
+
+.destination-distance {
+  font-size: 14px;
+  color: #00a0ff;
+  margin-top: 5px;
+}
+
+.map-controls {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  pointer-events: auto;
+}
+
+.map-control-btn {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.map-control-btn:hover {
+  background: rgba(0, 160, 255, 0.2);
+  border-color: #00a0ff;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.compass {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.compass::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 30px;
+  background: #00a0ff;
+  transform-origin: bottom center;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.compass::after {
+  content: 'N';
+  position: absolute;
+  top: 10px;
+  color: #00a0ff;
+  font-size: 14px;
+}
+
+/* Ensure all screens have proper spacing */
+.vehicle-screen,
+.media-player,
+.phone-screen,
+.settings-screen,
+.navigation,
+.home-screen {
+  min-height: 400px;
+}
+
+.climate-control {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: #00a0ff;
+  font-size: 1.1rem;
+}
+
+.temp-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.temp-btn:hover {
+  color: #00a0ff;
+}
+
+/* Fix layout bounds */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  position: relative;
+}
+
+/* Media player enhancements */
+.playlist {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.playlist-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.playlist-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.playlist-item.active {
+  background: rgba(0, 160, 255, 0.1);
+}
+
+.track-number {
+  color: #888;
+  font-size: 0.9rem;
+  width: 30px;
+}
+
+.track-details {
+  flex: 1;
+  text-align: left;
+}
+
+.track-title {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.track-artist {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 5px 0 0 0;
+}
+
+.track-duration {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.phone-integration {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+.integration-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.integration-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 160px;
+}
+
+.integration-option:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.integration-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.integration-icon.apple {
+  filter: invert(1);
+}
+
+.integration-icon.android {
+  filter: invert(0.7);
+}
