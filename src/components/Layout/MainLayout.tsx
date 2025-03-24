@@ -40,7 +40,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, onNavChange, activeAp
   ];
 
   const handleNavSelect = useCallback((index: number) => {
-    onNavChange(navItems[index].id);
+    const selectedApp = navItems[index].label;
+    console.log('Navigation selected:', selectedApp);
+    onNavChange(selectedApp);
   }, [navItems, onNavChange]);
 
   const { selectedIndex, rotateKnob, selectCurrent } = useIdriveController(navItems.length, handleNavSelect);
@@ -242,7 +244,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, onNavChange, activeAp
             {navItems.map((item, index) => (
               <button
                 key={item.id}
-                className={`nav-item ${index === selectedIndex ? 'selected' : ''} ${item.id === activeApp ? 'active' : ''}`}
+                className={`nav-item ${index === selectedIndex ? 'selected' : ''} ${item.label === activeApp ? 'active' : ''}`}
                 onClick={() => handleNavSelect(index)}
               >
                 <span className="nav-icon">{item.icon}</span>
